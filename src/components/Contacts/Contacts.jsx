@@ -1,11 +1,13 @@
 function Contacts({ contacts, onDeleteContact }) {
   return (
-    <ul>
+    <ul className="bbb">
       {contacts.map(({ id, name, number }) => (
-        <li key={id}>
+        <li key={id} className="iii">
           <p>{name}</p>
           <p>{number}</p>
-          <button onClick={() => onDeleteContact(id)}>Delete</button>
+          <button className="fff" onClick={() => onDeleteContact(id)}>
+            Delete
+          </button>
         </li>
       ))}
     </ul>

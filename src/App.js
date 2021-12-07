@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import Contacts from './components/Contacts/Contacts';
-import Form from './components/Form/Form';
-import Filter from './components/Filter/Filter';
+import Contacts from './components/Contacts';
+import Form from './components/Form';
+import Filter from './components/Filter';
 import { nanoid } from 'nanoid';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
@@ -57,14 +57,20 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <div>
-        <h1>Phonebook</h1>
-        <Form onSubmit={this.addContact} />
-        <h2>Contacts</h2>
-        <Filter value={filter} onChange={this.changeFilter} />
-        <Contacts
-          contacts={visibleContacts}
-          onDeleteContact={this.deleteContacts}
-        />
+        <div className="Wra">
+          <h1 className="rrr">Phonebook</h1>
+
+          <Form onSubmit={this.addContact} />
+        </div>
+        <div className="Wra">
+          <h2 className="rrr">Contacts</h2>
+          <Filter value={filter} onChange={this.changeFilter} />
+
+          <Contacts
+            contacts={visibleContacts}
+            onDeleteContact={this.deleteContacts}
+          />
+        </div>
       </div>
     );
   }

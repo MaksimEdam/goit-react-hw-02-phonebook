@@ -2,7 +2,7 @@ import React from 'react';
 
 function Filter({ value, onChange }) {
   return (
-    <label>
+    <label className="hhh">
       Find contacts by name{' '}
       <input type="text" value={value} onChange={onChange} />
     </label>
