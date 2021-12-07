@@ -5,7 +5,6 @@ import Filter from './components/Filter';
 import { nanoid } from 'nanoid';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
-
 class App extends Component {
   state = {
     contacts: [

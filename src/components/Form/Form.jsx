@@ -1,5 +1,4 @@
 import { Component } from 'react';
-
 class Form extends Component {
   state = {
     name: '',
