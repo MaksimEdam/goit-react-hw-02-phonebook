@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import s from './Form.module.css';
 class Form extends Component {
   state = {
     name: '',
@@ -22,8 +23,8 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="test3">
-        <div className="inputW">
-          <label className="ttt">
+        <div className={s.inputWrapper}>
+          <label className={s.Label}>
             Name
             <input
               type="text"
@@ -36,8 +37,8 @@ class Form extends Component {
             />
           </label>
         </div>
-        <div className="inputW">
-          <label className="ttt">
+        <div className={s.inputWrapper}>
+          <label className={s.Label}>
             Number
             <input
               type="tel"
@@ -50,7 +51,7 @@ class Form extends Component {
             />
           </label>
         </div>
-        <button className="fff" type="submit">
+        <button className={s.FormButton} type="submit">
           Add contact
         </button>
       </form>

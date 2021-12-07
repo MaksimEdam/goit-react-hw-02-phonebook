@@ -56,13 +56,13 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <div>
-        <div className="Wra">
-          <h1 className="rrr">Phonebook</h1>
+        <div className="Wrapper">
+          <h1 className="Title">Phonebook</h1>
 
           <Form onSubmit={this.addContact} />
         </div>
-        <div className="Wra">
-          <h2 className="rrr">Contacts</h2>
+        <div className="Wrapper">
+          <h2 className="Title">Contacts</h2>
           <Filter value={filter} onChange={this.changeFilter} />
 
           <Contacts
